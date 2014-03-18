@@ -24,9 +24,9 @@ var paths = {
   images: 'src/images/**/*',
   javascript: 'src/javascript/**/*.js',
   jquery: 'bower_modules/jquery/dist/jquery.min.js',
-  normalizecss: 'bower_modules/normalize.css/normalize.css',
+  bootstrap: ['bower_modules/bootstrap/dist/css/bootstrap.css','bower_modules/bootstrap/dist/css/bootstrap-theme.css','bower_modules/bootstrap/dist/js/bootstrap.js','bower_modules/bootstrap/dist/fonts/*'],
   html: 'src/**/*.html',
-  content: ['src/**/*.html','!./src/layouts/*']
+  content: ['src/**/*.html','!./src/_layouts/*']
 };
 
 gulp.task('sass', function() {
@@ -41,16 +41,22 @@ gulp.task('images', function() {
 });
 
 gulp.task('bowerfiles', function() {
-  gulp.src(paths.jquery)
+    gulp.src(paths.jquery)
     .pipe(gulp.dest('./build/javascript'));
 
-  gulp.src(paths.normalizecss)
-		.pipe(gulp.dest('./build/styles'));
+    gulp.src([paths.bootstrap[0],paths.bootstrap[1]])
+    .pipe(gulp.dest('./build/styles'));
+
+    gulp.src(paths.bootstrap[2])
+    .pipe(gulp.dest('./build/javascript'));
+
+    gulp.src(paths.bootstrap[3])
+    .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('javascript', function() {
   return gulp.src(paths.javascript)
-    .pipe(concat('all.min.js'))
+    .pipe(concat('all.js'))
     .pipe(gulp.dest('./build/javascript'));
 });
 
