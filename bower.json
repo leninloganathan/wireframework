@@ -1,0 +1,22 @@
+{
+  "name": "wireframework",
+  "version": "0.1.0",
+  "authors": [
+    "Reinier Ladan <reinierl@gmail.com>"
+  ],
+  "description": "New Wireframe Prototype",
+  "license": "none",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.0",
+    "jquery": "~2.1.0",
+    "guff": "~1.0.1"
+  }
+}
