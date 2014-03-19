@@ -13,6 +13,8 @@ div.annotation {
     margin-bottom: 0; }
   div.annotation a {
     color: #D90B05; }
+  div.annotation h2 {
+    margin: 0; }
 
 .meta-info-button {
   position: fixed;

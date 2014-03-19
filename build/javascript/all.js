@@ -16,7 +16,7 @@ $( document ).ready(function() {
 			}
 
 			$('html, body').animate({
-				scrollTop: $(".annotation").first().offset().top
+				scrollTop: $(".annotation").first().offset().top + -75
 			}, 400);
 		});
 	}
