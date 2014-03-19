@@ -81,7 +81,8 @@ gulp.task('githubpages',function(){
     buildbranch({
         branch: 'gh-pages',
         ignore: ['build','node_modules','bower_modules','src'],
-        folder: 'build'
+        folder: 'build',
+        domain: 'wireframework.com'
     }, function(err) {
         if(err) {
             throw err;
