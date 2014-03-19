@@ -4,6 +4,7 @@ var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var swig = require('gulp-swig');
 var marked = require('swig-marked');
+var buildbranch = require('buildBranch');
 
 var swigoptions  = {
   setup: function(swig) {
@@ -75,6 +76,19 @@ gulp.task('watch', function() {
 gulp.task('connect', connect.server({
   root: ['build']
 }));
+
+gulp.task('githubpages',function(){
+    buildbranch({
+        branch: 'gh-pages',
+        ignore: ['.git', 'www', 'node_modules'],
+        folder: 'build'
+    }, function(err) {
+        if(err) {
+            throw err;
+        }
+        console.log('Published!');
+    });
+});
 
 gulp.task('default', ['init','watch','connect']);
 gulp.task('init', ['bowerfiles','javascript','images','sass','templates']);

@@ -7,6 +7,7 @@
     "gulp-connect": "^1.0.7",
     "gulp-swig": "^0.5.1",
     "swig-marked": "0.0.1",
-    "gulp-concat": "^2.2.0"
+    "gulp-concat": "^2.2.0",
+    "buildbranch": "0.0.1"
   }
 }
