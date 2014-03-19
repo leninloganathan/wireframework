@@ -1,5 +1,7 @@
 {% extends '_layouts/master.html' %}
 
+{% block title %}Wireframework{% endblock %}
+
 {% block content %}
 
 <div class="container theme-showcase" role="main">
@@ -13,10 +15,12 @@
     <div class="jumbotron">
         <h1>Wireframework</h1>
 {% markdown %}
-A framework for creating wireframe prototypes. Make use of the built in annotation system, the [swig template system](http://paularmstrong.github.io/swig/) ([with Markdown](https://www.npmjs.org/package/gulp-swig) support) and use everything from [Twitter Bootstrap](http://getbootstrap.com). Everything is build by [Gulp](http://gulpjs.com).
+A framework for creating wireframe prototypes. Make use of the built in annotation system, the [swig template system](http://paularmstrong.github.io/swig/) ([with Markdown](https://www.npmjs.org/package/gulp-swig) support), [jQuery](http://jquery.com) and use everything from [Twitter Bootstrap](http://getbootstrap.com).
 
-See also: [Bootstrap example](/pages/bootstrap.html).
+[Gulp](http://gulpjs.com) takes care of parsing sass, templates and other stuff. [View the bootstrap example](/pages/bootstrap.html).
+
 {% endmarkdown %}
+    <a href="https://github.com/reinier/wireframework" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-link"></span> Wireframework on Github</a>
     </div>
 </div>
 

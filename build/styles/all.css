@@ -26,3 +26,6 @@ div.annotation {
 body {
   padding-top: 70px;
   padding-bottom: 30px; }
+
+h1 {
+  margin: 0; }
