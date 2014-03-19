@@ -26,6 +26,7 @@ var paths = {
   javascript: 'src/javascript/**/*.js',
   jquery: 'bower_modules/jquery/dist/jquery.min.js',
   bootstrap: ['bower_modules/bootstrap/dist/css/bootstrap.css','bower_modules/bootstrap/dist/css/bootstrap-theme.css','bower_modules/bootstrap/dist/js/bootstrap.js','bower_modules/bootstrap/dist/fonts/*'],
+  simpleannotate: ['bower_modules/simple-annotate/dist/styles/simpleannotate.css','bower_modules/simple-annotate/dist/javascript/simpleannotate.js','bower_modules/simple-annotate/dist/images/*'],
   html: 'src/**/*.html',
   content: ['src/**/*.html','!./src/_layouts/*']
 };
@@ -53,6 +54,15 @@ gulp.task('bowerfiles', function() {
 
     gulp.src(paths.bootstrap[3])
     .pipe(gulp.dest('./build/fonts'));
+
+    gulp.src([paths.simpleannotate[0]])
+    .pipe(gulp.dest('./build/styles'));
+
+    gulp.src([paths.simpleannotate[1]])
+    .pipe(gulp.dest('./build/javascript'));
+
+    gulp.src([paths.simpleannotate[2]])
+    .pipe(gulp.dest('./build/images'));
 });
 
 gulp.task('javascript', function() {
