@@ -21,7 +21,7 @@ var sassConfig = {
 };
 
 var paths = {
-  sass: 'src/**/*.scss',
+  sass: 'src/styles/**/*.scss',
   images: 'src/images/**/*',
   javascript: 'src/javascript/**/*.js',
   jquery: 'bower_modules/jquery/dist/jquery.min.js',
@@ -33,7 +33,7 @@ var paths = {
 gulp.task('sass', function() {
 	return gulp.src(paths.sass)
 		.pipe(sass(sassConfig))
-		.pipe(gulp.dest('./build'));
+		.pipe(gulp.dest('./build/styles'));
 });
 
 gulp.task('images', function() {
