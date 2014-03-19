@@ -1,0 +1,24 @@
+.annotation {
+  display: none;
+  background: #000FF9;
+  color: #fff; }
+
+div.annotation {
+  border: 2px solid #000FF9;
+  background: #BFE4FF;
+  color: #000FF9;
+  padding: 1em;
+  margin-bottom: 1em; }
+  div.annotation p:last-child {
+    margin-bottom: 0; }
+  div.annotation a {
+    color: #D90B05; }
+  div.annotation h2 {
+    margin: 0; }
+
+.meta-info-button {
+  position: fixed;
+  left: 15px;
+  bottom: 10px;
+  opacity: 1;
+  transition: all 0.4s linear; }
