@@ -80,7 +80,7 @@ gulp.task('connect', connect.server({
 gulp.task('githubpages',function(){
     buildbranch({
         branch: 'gh-pages',
-        ignore: ['build'],
+        ignore: ['build','node_modules','bower_modules','src'],
         folder: 'build'
     }, function(err) {
         if(err) {
