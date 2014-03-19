@@ -82,7 +82,7 @@ gulp.task('githubpages',function(){
         branch: 'gh-pages',
         ignore: ['build','node_modules','bower_modules','src'],
         folder: 'build',
-        domain: 'wireframework.com'
+        domain: 'www.wireframework.com'
     }, function(err) {
         if(err) {
             throw err;
